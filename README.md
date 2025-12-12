@@ -3,8 +3,6 @@
 
 This repository contains a collection of web-based case studies showcasing website designs and features. The project is built as part of my web development learning journey and demonstrates frontend layout, responsiveness, and UI/UX thinking.
 
-<u>**Case Studies**</u>
-
 **Case Study 1**
 Focus: Folder and File Structure, Sitemap, Storyboard, and Wireframe
 
@@ -19,7 +17,8 @@ Focus: Form Validation and Menu Update
 Collaborative work with Zandra
 Focus: Price Update and Sales Report Generation
 
-<u>Languages Used</u>
+Languages Used:
+
 **Frontend:** HTML, CSS, JavaScript
 
 **Backend:** PHP  
