@@ -1,0 +1,75 @@
+
+<! doctype html>
+<html lang = "en">
+<head>
+	<title>Daily Sales Report</title>
+	<meta charset = "utf-8">
+
+    <link rel = "stylesheet" href = "color.css">
+
+    <script>
+        function requireSelection(e) {
+          const anyChecked = !!document.querySelector('input[name="report_type[]"]:checked');
+          if (!anyChecked) {
+            e.preventDefault();
+            alert("Please select at least one report type.");
+          }
+        }
+      </script>
+
+</head>
+
+<body>
+
+<div class = "wrapper">
+
+<header>
+    <!--
+        <a href = "index.html">
+        <img src="images/rabbits_retreat.jpg" width="2000px" height="auto" alt="Rabbit's Retreat">
+    </a>
+    -->
+</header>
+
+<div id = "box">
+
+<div id = "leftcolumn">
+
+<nav>
+    <b>
+        <a href = "admin.html"><span class = "currentpage">Daily Sales Report</span></a> <br>
+    </b>
+</nav>
+
+</div>
+
+<div id = "rightcolumn">
+
+   <h2>Click to generate daily sales report:</h2>
+
+   <form method="post" action="scripts/sales_report.php" onsubmit="requireSelection(event)">
+     <input type="checkbox" name="report_type[]" value="product"> Total dollar and quantity sales by products<br><br>
+     <input type="checkbox" name="report_type[]" value="category"> Total dollar and quantity sales by categories<br>
+     <p>Popular Option of the Best Selling Product: _______________ </p>
+     <br>
+     <button type="submit">Generate Report</button>
+
+    
+  </form>
+
+</div>
+
+</div>
+
+<footer>
+    <small><i>Copyright &copy; 2025 JavaJam Coffee House 
+        <br> <a href = "mailto:zandra@tong.com">zandra@tong.com</a>
+    </i></small>
+</footer>
+
+
+</div>
+</div>
+
+</body>
+</html>

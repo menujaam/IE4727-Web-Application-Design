@@ -1,0 +1,253 @@
+<! doctype html>
+<html lang = "en">
+<head>
+	<title>Menu</title>
+	<meta charset = "utf-8">
+
+    <link rel = "stylesheet" href = "color.css">
+
+    <script type="text/javascript" src="scripts/menu_update.js"></script>
+</head>
+
+<body>
+
+<div class = "wrapper">
+
+<header>
+    <!--
+    <a href = "index.html">
+        <img src="images/javajamlogo.gif" width="auto" height="100%" alt="JavaJam Coffee House">
+    </a>
+    -->
+</header>
+
+<div id = "box">
+
+<div id = "leftcolumn">
+
+<nav>
+    <b>
+        <a href = "index.html">Home</a> <br>
+        <a href = "menu.html"><span class = "currentpage">Menu</span></a> <br>
+        <a href = "music.html">Music</a> <br>
+        <a href = "jobs.html">Jobs</a>
+    </b>
+</nav>
+
+</div>
+
+<div id = "rightcolumn">
+    <h2>We hope you enjoy the food and drinks at <span class = "companyname">JavaJam Coffee House</span>!</h2>
+
+    <p>
+        Please let us know if you have any allergies.
+        <br> Our menu has allergens highlighted in the descriptions.
+        <br><br> Highlighted allergens include:
+
+        <ul>
+            <li><span class = "gluten">gluten</span></li>
+            <li><span class = "nuts">nuts</span></li>
+            <li><span class = "dairy">dairy (milk)</span></li>
+        </ul>
+        
+    </p>
+
+<form id = "order_form" action="scripts/show_post.php" method="post">
+
+
+<table>
+    <!--
+    <caption><strong><span class = "companyname">JavaJam Coffee House - Menu</span></strong></caption>
+    -->
+
+    <tr>
+        <th>Item</th>
+        <th>Description</th>
+        <th>Quantity</th>
+        <th>Subtotal</th>
+    </tr>
+
+    <tr>
+        <td>
+            <strong>Just Java</strong><br>
+            <img src = "images/creamy_cocoa.jpg" alt = "Just Java";>
+        </td>
+
+        <td>
+            Rich and creamy coffee served with <span class = "dairy">milk</span>.
+            <br><br>
+
+            <input type="radio" name="jj_cost" value="2"> <strong><em>Endless Cup: $2</em></strong>
+            <br>
+
+            <!--
+            <input type="radio" name="cc_cost" value="6"> <strong><em>Iced: $6</em></strong> <br>
+            -->
+            
+            <!-- 
+            <form id = "cc_cost_form" class = "radio-group" action="scripts/show_post.php" method="post">
+            </form>
+            -->
+
+        </td>
+
+        <!-- add two text boxes, the first for user input of quantity and the second for displaying the subtotal -->
+        
+        <td>
+
+            <!-- maxlength of 2 limits entered characters to 2 -->
+            <input type="text" name="jj_quantity"  id="jj_quantity" size=4 maxlength="2" placeholder = "Quantity" style="text-align: center;">
+
+            <!--
+            <form action="scripts/show_post.php" method="post">
+            </form>
+            -->
+
+        </td>
+            
+        <td>
+
+            <!-- increased size because more characters are needed to display the price, and added readonly to prevent editing of the textbox's content -->
+            <input type="text" name="jj_subtotal" id="jj_subtotal" size=6 placeholder = "$0.00" readonly style="text-align: center;">
+            
+            <!--
+            <form action="scripts/show_post.php" method="post">
+            </form>
+            -->
+    
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <strong>Cafe au Lait</strong><br>
+            <img src = "images/hazelnut_latte.jpg" alt = "Cafe au Lait";>
+        </td>
+
+        <td>
+            <span class = "nuts">Nuts</span>, 
+            <span class = "dairy">milk</span>, 
+            and coffee meld together in this delightful latte.
+            <br><br>
+
+            <!-- <strong><em>Hot: $6, Iced: $8</em></strong> -->
+
+            <input type="radio" name="cal_cost" value="2"> <strong><em>Single: $2</em></strong> &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
+            <input type="radio" name="cal_cost" value="3"> <strong><em>Double: $3</em></strong>
+            <br>
+
+            <!--
+            <form id = "hl_cost_form" class = "radio-group" action="scripts/show_post.php" method="post">
+            </form>
+            -->
+        </td>
+
+        <td>
+
+            <!-- maxlength of 2 limits entered characters to 2 -->
+            <input type="text" name="cal_quantity" id="cal_quantity" size=4 maxlength="2" placeholder = "Quantity" style="text-align: center;">
+
+            <!--
+            <form action="scripts/show_post.php" method="post"> 
+            </form>
+            -->
+
+        </td>
+            
+        <td>
+
+            <!-- increased size because more characters are needed to display the price, and added readonly to prevent editing of the textbox's content -->
+            <input type="text" name="cal_subtotal"  id="cal_subtotal" size=6 placeholder = "$0.00" readonly style="text-align: center;">
+            
+            <!--
+            <form action="scripts/show_post.php" method="post">
+            </form>
+            -->
+    
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <strong>Iced Cappucino</strong><br>
+            <img src = "images/honey_french_toast.jpg" alt = "Iced Cappucino";>
+        </td>
+
+        <td>
+            Enjoy a refreshing shot of coffee. Chilled and brewed with berries and chocolate.
+            <br>*Iced Cappucino may contain traces of <span class = "gluten">gluten</span>.
+            <br><br>
+
+            <!-- <strong><em>Small: $4, Regular: $5, Large: $6</em></strong> -->
+
+            <input type="radio" name="ic_cost" value="4.75"> <strong><em>Single: $4.75</em></strong> &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
+            <input type="radio" name="ic_cost" value="5.75"> <strong><em>Regular: $5.75</em></strong>
+            <br>
+
+            <!--
+            <form id = "hft_cost_form" class = "radio-group" action="scripts/show_post.php" method="post"> 
+            </form>
+            -->
+        </td>
+
+        <td>
+
+            <!-- maxlength of 2 limits entered characters to 2 -->
+            <input type="text" name="ic_quantity"  id="ic_quantity" size=4 maxlength="2" placeholder = "Quantity" style="text-align: center;">
+
+            <!--
+            <form action="scripts/show_post.php" method="post"> 
+            </form>
+            -->
+
+        </td>
+            
+        <td>
+
+            <!-- increased size because more characters are needed to display the price, and added readonly to prevent editing of the textbox's content -->
+            <input type="text" name="ic_subtotal"  id="ic_subtotal" size=6 placeholder = "$0.00" readonly style="text-align: center;">
+
+            <!--
+            <form action="scripts/show_post.php" method="post"> 
+            </form>
+            -->
+    
+        </td>
+    </tr>
+
+    <tr>
+
+        <!-- <input type="submit" name="checkout" value="Check Out" class="checkout-btn"> -->
+        <td colspan="1">
+            <!-- hide submit button for case study 4, unhide for case study 5?-->
+            <input type="submit" name="checkout" value="Check Out" class="checkout-btn" hidden>
+        </td>
+
+        <td colspan="3" style="padding-left: 50%;">
+            <label for = "total_price"> <strong>Total Price</strong> </label>
+            <input type="text" name="total_price"  id="total_price" size=10 placeholder = "$0.00" readonly style="text-align: center;">
+        </td>
+    </tr>
+
+</table>
+
+
+</form>
+
+</div>
+
+</div>
+
+<footer>
+    <small><i>Copyright &copy; 2025 JavaJam Coffee House 
+        <br> <a href = "mailto:zandra@tong.com">zandra@tong.com</a>
+    </i></small>
+</footer>
+
+</div>
+
+<!-- script for registering event listeners -->
+<script type="text/javascript" src="scripts/menu_listener.js"></script>
+
+</body>
+</html>

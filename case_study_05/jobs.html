@@ -1,0 +1,108 @@
+<! doctype html>
+<html lang = "en">
+<head>
+	<title>Jobs</title>
+	<meta charset = "utf-8">
+
+    <link rel = "stylesheet" href = "color.css">
+    
+</head>
+
+<body>
+
+<div class = "wrapper">
+
+<header>
+    <!--
+        <a href = "index.html">
+        <img src="images/rabbits_retreat.jpg" width="2000px" height="auto" alt="Rabbit's Retreat">
+        </a>
+    -->
+</header>
+
+<div id = "box">
+
+<div id = "leftcolumn">
+
+<nav>
+    <b>
+        <a href = "index.html">Home</a> <br>
+        <a href = "menu.html">Menu</a> <br>
+        <a href = "music.html">Music</a> <br>
+        <a href = "jobs.html"><span class = "currentpage">Jobs</span></a>
+    </b>
+</nav>
+
+</div>
+
+<div id = "rightcolumn">
+    <h2>Join us at <span class = "companyname">JavaJam Coffee House</span> and bring joy to every day!</h2>
+
+    <p>
+        Fill out the form below to start your application.
+        Required fields are marked with an asterisk *.
+    </p>
+
+    <div>
+        <fieldset>
+            <legend><strong>Application Information</strong></legend>
+            <br>
+
+            <form action="scripts/show_post.php" method="post" > 
+                <p>
+                <label for="ApplicantName">*Name: </label>
+                <input type="text" name="ApplicantName" id="ApplicantName" size=30 required placeholder = "Enter your name here...">
+                <br>
+                <span id="nameError" class="errors"></span>
+                <br>
+                </p>
+
+                <p>
+                <label for="ApplicantEmail">*Email: </label>
+                <input type="email" name="ApplicantEmail" id="ApplicantEmail" size=30 required placeholder = "Enter your email here...">
+                <br>
+                <span id="emailError" class="errors"></span>
+                <br>
+                </p>
+
+                <p>
+                <label for="StartDate">Start Date: </label>
+                <input type="date" name="StartDate" id="StartDate" placeholder = "DD/MM/YYYY">
+                <br>
+                <span id="startDateError" class="errors"></span>
+                <br>
+                </p>
+
+                <p>
+                <label for="Experience">*Experience: </label>
+                <textarea type="textarea" name="Experience" id="Experience" rows="3" cols="50" placeholder = "Enter your past experience here..."></textarea>
+                <br>
+                <span id="experienceError" class="errors"></span>
+                <br>
+                </p>
+
+                <input type="reset" value="Clear"> <br><br>
+                <input type="submit" value="Apply Now" id="submitButton" class="disabled" disabled>
+
+            </form>
+
+
+        </fieldset>
+    </div>
+
+</div>
+
+</div>
+
+<footer>
+    <small><i>Copyright &copy; 2025 JavaJam Coffee House 
+        <br> <a href = "mailto:zandra@tong.com">zandra@tong.com</a>
+    </i></small>
+</footer>
+
+</div>
+
+<script type="text/javascript" src="scripts/formvalidation.js"></script>
+
+</body>
+</html>

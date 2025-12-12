@@ -1,0 +1,222 @@
+/* 4 main sections: top, left, right, and bottom */
+/* plus wrapper to contain everything */
+/* plus box to contain left and right columns */
+
+.wrapper { background-color: #e2e6ac; 
+           width: 80%;
+           margin: auto;
+           min-width: 800px;		   
+}
+
+header {
+    background-color: #d1ae82;
+    padding: 1%;
+    margin-bottom: 0px;
+    height: 10%;
+    text-align: center;
+    align-content: center;
+    background-image: url(images/javajamlogo.gif);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+#box {
+    display: flex;
+    background-color: #4d5020;
+    width: 100%;
+    min-width: 800px;
+    height: auto;
+    align-content: center;
+}
+
+#leftcolumn { 
+    background-color: #e2c7a5;
+    float: left;
+	width: 15%;
+    text-align: center;
+    padding-top: 20px;
+    margin: 0px;
+    height: auto;
+}
+
+#rightcolumn {
+    background-color: #f0e7dc;
+    width: 85%;
+    height: auto;
+    /*padding-left: 5%;*/
+    padding: 0% 5%;
+    align-content: top;
+}
+
+footer {
+    background-color: #d1ae82;
+    text-align: center;
+    align-content: center;
+    margin: 0px;
+    height: 5%;
+    padding: 1% 0%;
+}
+
+/* styling for navigation */
+/* no underline + different link colours for visited and unvisited */
+
+nav a { 
+    text-decoration: none;
+}
+
+a:link {
+    color: #886d4c;
+}
+
+a:visited {
+    color: #b49269;
+}
+
+.currentpage {color: #ff8c00}
+
+/* styling for images */
+
+img {
+  max-width: 180;
+  height: auto;
+}
+
+.imgfloatleft {
+    float: left;
+    margin: 0px 40px;
+    padding: 0px 0px;
+    
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;   /* Centers vertically */
+        
+    /*align-content: top;*/
+}
+
+.textfloatright {
+    float: center;
+    margin: 0px;
+    padding: 0px 10px;
+    align-content: center;
+}
+
+
+/* ul and li work together to style the bullet points as images instead */
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li::before {
+    content: '';
+	display: inline-block;
+    margin: 0px 0 0px -30px; /* margin to make li look aligned with usual li despite padding */
+	padding: 5px 0 5px 30px; /* padding for the whole li TRBL */
+    /*padding-left: 60px;*/
+	list-style: none;
+	background-image: url(images/rabbit_loaf.jpg);
+	background-repeat: no-repeat;
+	background-position: left;
+	background-size: 20px;
+}
+
+/* formatting text for headers and body */
+/* sample in slides uses verdana? */
+
+h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.companyname {color: #ff8c00}
+
+.gluten {background-color: #dbcab4;}
+.nuts {background-color: #ab8c67;}
+.dairy {background-color: #ffffff;}
+
+
+/* table formatting */
+
+table {
+    border: 1px solid;
+    border-collapse: collapse; /* Ensures borders between cells are unified */
+    border-radius: 10px; /* Adjust the value for desired roundness */
+    overflow: hidden; /* Crucial to clip content that might extend beyond rounded corners */
+    max-width: 100%;
+    margin: 10px;
+}
+
+td:nth-of-type(odd), th:nth-of-type(odd) {
+    align-content: center;
+    text-align: center;
+    padding: 20px; /* Adds 10 pixels of padding to all sides of the cell content */
+}
+
+/* format odd rows with different background colour */
+table tr:nth-of-type(odd) {
+    background-color: #886d4c;
+}
+
+/* table cell padding */
+
+th, td {
+  padding: 10px;
+}
+
+/* styling for fieldset, form, input etc */
+
+fieldset {
+    margin: 20px;
+    background-color: #d1ae82;
+    border: 1px solid; /* Solid border with a light gray color */
+    border-radius: 10px; /* Rounded corners */
+}
+
+legend {
+    font-size: larger;
+}
+
+label {
+    float: left;
+    clear: left;
+    display: block;
+    width: 100px;
+    text-align: right;
+    padding-right: 20px;
+    /*margin-top: 10px;*/
+}
+
+input, textarea {
+margin-bottom: 2px;
+/*display: block;*/ /* removed it to move the error message closer */
+}
+
+/* used to style radio buttons in menu */
+.radio-group {
+            display: flex;
+            align-items: center; /* Vertically centers the radio button with the text */
+        }
+
+/* align radio button with text for radio button */
+.radio-group input {
+    vertical-align: middle;
+    margin: 0px 6px;
+}
+
+input[type="radio"]:focus {
+  outline: 2px solid blue; /* Example: Add a blue outline */
+  box-shadow: 0 0 5px rgba(0, 0, 255, 0.5); /* Example: Add a subtle blue shadow */
+}
+
+/* to show error in input of form */
+.errors {
+  color: red;
+  font-size: 14px;
+  margin-left: 120px;  /* same as label width + padding-right */
+  margin-top: 0px;
+}
